@@ -297,7 +297,7 @@ async function setupStatusHandlers(socket) {
                         break;
                     } catch (error) {
                         retries--;
-                        console.warn(`Failed to read status, retries left: ${retries}`,y error);
+                        console.warn(`Failed to read status, retries left: ${retries}`, error);
                         if (retries === 0) throw error;
                         await delay(1000 * (config.MAX_RETRIES - retries));
                     }
